@@ -1,0 +1,1 @@
+A responsive car rental website offering seamless online booking. Users can browse cars, view details, and make bookings with ease. The platform includes user authentication, booking management and an admin dashboard for managing users, car listings and bookings. Built with technologies including HTML, CSS, JavaScript, PHP, and MySQL.
