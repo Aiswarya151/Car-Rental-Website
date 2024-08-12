@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car Details: Brezza</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    body {
+      font-family: 'montserrat';
+      margin: 0;
+      padding: 0;
+      background-image: url('images/skoda.jpg'); /* Background image */
+      background-size: cover; /* Fit background image to the screen */
+      background-position: top center;
+      position: relative;
+    }
+
+    /* Black shader overlay */
+    .black-shader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+      z-index: -1; /* Push the overlay below the content */
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      position: relative;
+      z-index: 1; /* Ensure content is above the black shader */
+    }
+
+    header {
+      text-align: center;
+      padding: 20px 0;
+      color: #fff; /* Change header text color to white */
+    }
+
+    h1 {
+        font-family: 'montserrat';
+      position: relative;
+      color: #fff; /* Change header text color to white */
+    }
+
+    .car-details {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .car-details:hover {
+      transform: translateY(-5px); /* Move up slightly on hover */
+    }
+
+    .car-details img {
+      width: 300px;
+      margin-right: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    .car-details:hover img {
+      transform: scale(1.1); /* Zoom in on hover */
+    }
+
+    .details {
+      flex-grow: 1;
+    }
+
+    .details h2 {
+      color: #333;
+    }
+
+    .details p {
+      color: #666;
+      margin: 5px 0;
+    }
+
+    .rental-price {
+      font-size: 24px;
+      color: #007bff;
+      margin-top: 10px;
+    }
+
+    .btn-rent {
+            background-color: yellow; /* Yellow background color */
+            color: black; /* Black text color */
+            border: none; /* No border */
+            padding: 10px 20px; /* Padding for button size */
+            text-align: center; /* Center text */
+            text-decoration: none; /* No underline on text */
+            display: inline-block; /* Inline-block for proper spacing */
+            font-size: 16px; /* Font size */
+            cursor: pointer; /* Pointer cursor on hover */
+            border-radius: 5px; /* Rounded corners */
+            transition: background-color 0.3s ease; /* Smooth transition for background color */
+        }
+
+        .btn-rent:hover {
+            background-color: gold; /* Slightly darker yellow on hover */
+        }
+
+    footer {
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black */
+      color: #fff;
+      padding: 10px 0;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <!-- Black shader overlay -->
+  <div class="black-shader"></div>
+
+  <header>
+    <h1>Details</h1>
+  </header>
+
+  <div class="container">
+    <div class="car-details">
+      <img src="images/img12.png" alt="Manza">
+      <div class="details">
+        <h2>Skoda Superb</h2>
+        <p><strong>Model Year:</strong> 2017</p>
+        <p><strong>Engine:</strong> 2.0L TSI Petrol</p>
+        <p><strong>Transmission:</strong> 7-Speed DSG Automatic</p>
+        <p><strong>Seats:</strong> 5</p>
+        <p><strong>Fuel Efficiency:</strong> 15 km/l</p>
+        <p><strong>Features:</strong> Automatic LED Headlamps with DRLs, Electric Sunroof, Leather Upholstery, Dual-Zone Automatic Climate Control, 8-inch Touchscreen Infotainment with SmartLink Connectivity, Apple CarPlay and Android Auto, Wireless Charging, Electrically Adjustable Front Seats with Memory Function, Cruise Control, Parking Assist with Reverse Camera, Six Airbags, ABS with EBD</p>
+        <p class="rental-price">₹11500/day</p>
+        <a href="mydashboard11.php"
+        <button class="btn-rent">Book Now </button>
+      </a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <a href="index.skoda" class="footer-logo">
+      <img src="https://motors.stylemixthemes.com/rent-a-car/wp-content/uploads/sites/7/2017/01/motors_car_rental_logo.svg" alt="logo two">
+    </a>
+    <p>&copy;2024 All Rights Reserved</p>
+  </footer>
+</body>
+</html>

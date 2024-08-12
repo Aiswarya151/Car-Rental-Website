@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sign Up Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+    <link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+    <link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+    <link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+    <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f2f2f2;
+            height: 100%;
+        }
+
+        .limiter {
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .container-login100 {
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            padding: 15px;
+            background: #333; /* Change background color to #333 */
+        }
+
+        .login100-more {
+            display: none;
+        }
+
+        .wrap-login100 {
+            width: 100%;
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            display: flex;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .login100-pic {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #f2f2f2;
+            border-radius: 10px 0 0 10px;
+        }
+
+        .login100-pic #lottie-signup {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        .login100-form {
+            width: 50%;
+            padding: 50px 50px 37px 50px;
+        }
+
+        .login100-form-title {
+            font-size: 24px;
+            color: #333;
+            line-height: 1.2;
+            text-align: center;
+            margin-bottom: 40px;
+            font-weight: 700;
+        }
+
+        .wrap-input100 {
+            position: relative;
+            width: 80%;
+            z-index: 1;
+            margin-bottom: 25px;
+        }
+
+        .input100 {
+			font-family: 'montserrat';
+            font-size: 15px;
+            line-height: 1.2;
+            color: #333;
+            display: block;
+            width: 100%;
+            background: #f7f7f7;
+            height: 50px;
+            border-radius: 25px;
+            padding: 0 30px 0 55px;
+            border: none;
+            outline: none;
+            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s;
+        }
+
+        .input100:focus {
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .focus-input100 {
+            position: absolute;
+            display: block;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            border-radius: 25px;
+        }
+
+        .label-input100 {
+			font-family: 'montserrat';
+            font-size: 20px;
+            color: #666;
+            line-height: 1.2;
+            text-align: left;
+            padding-left: 30px;
+            margin-bottom: 8px;
+        }
+
+        .container-login100-form-btn {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .wrap-login100-form-btn {
+            width: 80%;
+            display: block;
+            position: relative;
+            z-index: 1;
+            border-radius: 25px;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        .login100-form-bgbtn {
+            position: absolute;
+            z-index: -1;
+            width: 300%;
+            height: 100%;
+            background:  #333;
+            transition: all 0.4s;
+        }
+
+        .login100-form-btn {
+            font-size: 16px;
+            color: #fff;
+            line-height: 1.2;
+            text-transform: uppercase;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 20px;
+            width: 100%;
+            height: 50px;
+            background-color: transparent;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            transition: all 0.4s;
+        }
+
+        .login100-form-btn:hover .login100-form-bgbtn {
+            width: 100%;
+        }
+
+        .login100-form-btn:hover {
+            background: #e0a800;
+        }
+
+        .txt3 {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.2;
+            text-align: center;
+        }
+
+        .hov1 {
+            color: #4e54c8;
+            transition: all 0.4s;
+        }
+
+        .hov1:hover {
+            color: #333;
+        }
+
+        @media (max-width: 992px) {
+            .wrap-login100 {
+                flex-direction: column;
+            }
+            .login100-pic {
+                display: none;
+            }
+            .login100-form {
+                width: 100%;
+            }
+        }
+
+		.title-bar {
+    background-color: #333;
+    color: #e0a800;
+    padding: 10px;
+    text-align: center;
+	width: 100%; 
+	
+}
+
+.title-bar h1 {
+	font-family: 'montserrat';
+    margin: 0;
+}
+footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            
+            bottom: 0;
+            width: 100%;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+	<div class="title-bar">
+        <h1>SIGN UP</h1>
+    </div>
+    <div class="limiter">
+        <div class="container-login100">
+            <div class="wrap-login100">
+                <div class="login100-pic">
+                    <div id="lottie-signup"></div>
+                </div>
+                <form class="login100-form validate-form" action="reg_connect.php" method="post">
+                   
+
+                    <div class="wrap-input100 validate-input" data-validate="Name is required">
+                        <span class="label-input100">Full Name</span>
+                        <input class="input100" type="text" name="name" placeholder="Name..." required>
+                        <span class="focus-input100"></span>
+                    </div>
+
+                    <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
+                        <span class="label-input100">Email</span>
+                        <input class="input100" type="email" name="email" placeholder="Email address..." required>
+                        <span class="focus-input100"></span>
+                    </div>
+
+                    <div class="wrap-input100 validate-input" data-validate="Username is required">
+                        <span class="label-input100">Username</span>
+                        <input class="input100" type="text" name="username" placeholder="Username..." required>
+                        <span class="focus-input100"></span>
+                    </div>
+
+                    <div class="wrap-input100 validate-input" data-validate="Password is required">
+                        <span class="label-input100">Password</span>
+                        <input class="input100" type="password" name="pass" placeholder="*************" required>
+                        <span class="focus-input100"></span>
+                    </div>
+
+                    <div class="wrap-input100 validate-input" data-validate="Repeat Password is required">
+                        <span class="label-input100">Repeat Password</span>
+                        <input class="input100" type="password" name="repeatpass" placeholder="*************" required>
+                        <span class="focus-input100"></span>
+                    </div>
+
+                    <div class="container-login100-form-btn">
+                        <div class="wrap-login100-form-btn">
+                            <div class="login100-form-bgbtn"></div>
+                            <button class="login100-form-btn" name="submit">
+                                Sign Up
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+    <script src="vendor/animsition/js/animsition.min.js"></script>
+    <script src="vendor/bootstrap/js/popper.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="vendor/select2/select2.min.js"></script>
+    <script src="vendor/daterangepicker/moment.min.js"></script>
+    <script src="vendor/daterangepicker/daterangepicker.js"></script>
+    <script src="vendor/countdowntime/countdowntime.js"></script>
+    <script src="js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.6/lottie.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var animation = lottie.loadAnimation({
+                container: document.getElementById('lottie-signup'), // the dom element that will contain the animation
+                renderer: 'svg',
+                loop: true,
+                autoplay: true,
+                path: 'images/signup.json' // the path to the animation json
+            });
+        });
+    </script>
+  <footer>
+	<a href="index.php" class="footer-logo">
+		<img src="https://motors.stylemixthemes.com/rent-a-car/wp-content/uploads/sites/7/2017/01/motors_car_rental_logo.svg" alt="logo two">
+	  </a>
+	<p>&copy; 2024 All rights reserved.</p>
+</footer>
+
+</body>
+</html>
